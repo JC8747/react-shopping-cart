@@ -12,13 +12,10 @@ import CartContext from './contexts/CartContext';
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
-
 	const addItem = item => {
 		// add the given item to the cart
 		setCart([...cart, item ])
-
 	};
-
 	const removeItem = (id) => {
 		const filterItems = cart.filter(item => item.id !== id);
 		setCart(filterItems)
